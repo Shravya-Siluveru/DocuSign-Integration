@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DocuSign Application</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+<body>
+    <div class="container">
+        <h3>Seller View</h3>
+        <div class="row">
+                <ul class="list-group">
+                        <li class="list-group-item" data-toggle="modal" data-target="#myModal"><a href="#">Bill of Sale</a></li>
+                        <li class="list-group-item"><a href="#">Fee Schedule</a></li>
+                </ul>
+        </div>
+        
+        I am a <a href="/buyer">Buyer</a><br>
+        <a href="/">Index</a>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Bill of Sale</h4>
+                <iframe src="/sign?f=bos&r=seller" width="550" height="680"></iframe> 
+            </div>
+            <div class="col-md-6">
+                <h4>Fee Schedule</h4>
+                <iframe src="" width="550" height="680"></iframe> 
+            </div>
+        </div>
+
+    </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <iframe src="/sign?f=bos&r=seller" width="650" height="680" frameborder="0" allowtransparency="true"></iframe>  
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="docusign_module.js"></script>
+</body>
+</html>
